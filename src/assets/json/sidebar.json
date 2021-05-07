@@ -1,0 +1,111 @@
+[
+    {
+        "section": "",
+        "title": "Dashboard",
+        "icon": "fa-tachometer-alt",
+        "route": "dashboard.html",
+        "items": []
+    },
+    {
+        "section": "Interface",
+        "title": "Components",
+        "icon": "fa-cog",
+        "route": "",
+        "items": [
+            {
+                "subTitle": "Custom Components:",
+                "subItems": [
+                    {
+                        "title": "Buttons",
+                        "route": "components/buttons"
+                    },
+                    {
+                        "title": "Cards",
+                        "route": "components/cards"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Interface",
+        "title": "Utilities",
+        "icon": "fa-wrench",
+        "route": "",
+        "items": [
+            {
+                "subTitle": "Custom Utilities:",
+                "subItems": [
+                    {
+                        "title": "Colors",
+                        "route": "utilities-color.html"
+                    },
+                    {
+                        "title": "Borders",
+                        "route": "utilities-border.html"
+                    },
+                    {
+                        "title": "Animations",
+                        "route": "utilities-animation.html"
+                    },
+                    {
+                        "title": "Other",
+                        "route": "utilities-other.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Addons",
+        "title": "Pages",
+        "icon": "fa-folder",
+        "route": "",
+        "items": [
+            {
+                "subTitle": "Login Screens:",
+                "subItems": [
+                    {
+                        "title": "Login",
+                        "route": "login.html"
+                    },
+                    {
+                        "title": "Register",
+                        "route": "register.html"
+                    },
+                    {
+                        "title": "Forgot Password",
+                        "route": "forgot-password.html"
+                    }
+                ]
+            },
+            {
+                "subTitle": "Other Pages:",
+                "subItems": [
+                    {
+                        "title": "404 Page",
+                        "route": "404.html"
+                    },
+                    {
+                        "title": "Blank Page",
+                        "route": "blank.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Addons",
+        "title": "Charts",
+        "icon": "fa-chart-area",
+        "route": "charts.html",
+        "items": []
+    },
+    {
+        "section": "Addons",
+        "title": "Tables",
+        "icon": "fa-table",
+        "route": "tables.html",
+        "items": []
+    }
+]

@@ -1,0 +1,11 @@
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span>Copyright &copy;
+          <b *ngIf="isBold">{{empresa}}</b>
+          <span *ngIf="!isBold"> {{empresa}} </span>
+          ─ {{anio}}
+        </span>
+      </div>
+    </div>
+</footer>

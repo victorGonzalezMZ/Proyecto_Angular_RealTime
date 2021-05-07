@@ -1,0 +1,33 @@
+<h1>Paises</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <ng-select 
+            [items]="defaultBindingsList"
+            (change)="onChangeRegion()" 
+            [(ngModel)]="selectedRegion">
+        </ng-select>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-md-3" *ngFor="let item of paisesList">
+
+        <div class="card" >
+            <img [src]="item.flag" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">
+                    Region: {{item.region}} <br>
+                    Subregion: {{item.subregion}} <br>
+                    Population: {{item.population}}
+                </p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted" *ngFor="let coord of item.latlng">{{coord}}</small>
+                <a href="#" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+</div>

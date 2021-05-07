@@ -1,0 +1,55 @@
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <navigation-sidebar
+    titleMenu = "MTWDM"
+    subtitleMenu = ""
+    [sidebar_menuItems]="sidebarItems">
+  </navigation-sidebar>
+  <!-- /Sidebar-->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column" >
+      <div class="position-absolute bottom-0 end-0">
+        <app-chatbox></app-chatbox>
+      </div>
+
+
+      <!-- Main Content -->
+      <div id="content">
+
+          <!-- Topbar -->
+          <navigation-topbar
+            [menuProfileItems]="menuItems"
+            (onClickMenu)="listenChildMenuEvent($event)">
+          </navigation-topbar>
+          <!-- /Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <h1>Welcome!</h1>
+          </div>
+          <!-- /Begin Page Content -->
+
+      </div>
+      <!-- /Main Content -->
+
+      <!-- Footer -->
+      <navigation-footer
+        [empresa]="miEmpresa"
+        [anio]="periodo">
+      </navigation-footer>
+      <!-- /Footer -->
+
+  </div>
+  <!-- /Content Wrapper -->
+
+</div>
+<!-- /Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+<!-- /scroll to top button-->
