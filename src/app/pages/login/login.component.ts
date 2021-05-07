@@ -4,8 +4,6 @@ import { AuthService } from '../../services/auth.service';
 import { SocketioService } from '../../services/socketio.service';
 import { environment } from 'src/environments/environment';
 import { Subscription } from 'rxjs';
-import { ChatboxComponent } from '../../components/chatbox/chatbox.component';
-import { TopbarComponent } from '../../components/navigation/topbar/topbar.component';
 import { Router } from '@angular/router';
 
 @Component({
