@@ -18,7 +18,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { ChatboxComponent } from './components/chatbox/chatbox.component';
 
-const config: SocketIoConfig = { url: 'http://localhost:3003', options: {}}
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {}}
 
 @NgModule({
   declarations: [
