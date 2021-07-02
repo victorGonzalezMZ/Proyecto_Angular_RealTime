@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
   message2: string = '';
   hiddenMessage2: boolean = false;
 
+  a = [];
+
   constructor(private authSvc: AuthService, public socket: SocketioService, private router: Router ) {
     this.suscription$ = this.socket.on('responseSignIn').subscribe((response: any) => {
       this.message1 = response;
@@ -32,15 +34,18 @@ export class LoginComponent implements OnInit {
     });
 
     this.suscription$ = this.socket.on('returnUserSignIn').subscribe((user: any) => {
-      window.sessionStorage.setItem('fullName', user.nombreCompleto);
-      window.sessionStorage.setItem('email',user.correo);
-      window.sessionStorage.setItem('photo',user.fotoURL);
+
+      window.sessionStorage.setItem('email', user.correo);
+
 
       this.NewUserPass = true;
     });
 
     this.suscription$ = this.socket.on('finishSignIn').subscribe((result: any) => {
-      window.sessionStorage.setItem('token', result[0].token.token);
+      sessionStorage.setItem('fullName', result[0].user.nombreCompleto);
+      sessionStorage.setItem('email', result[0].user.correo);
+      sessionStorage.setItem('photo', result[0].user.fotoURL);
+      sessionStorage.setItem('token', result[0].token.token);
 
       this.NewUserPass = false;
 
@@ -48,10 +53,10 @@ export class LoginComponent implements OnInit {
     });
 
     this.suscription$ = this.socket.on('resultLogin').subscribe((result: any) => {
-      window.sessionStorage.setItem('fullName', result[0].user.nombreCompleto);
-      window.sessionStorage.setItem('email',result[0].user.correo);
-      window.sessionStorage.setItem('photo',result[0].user.fotoURL);
-      window.sessionStorage.setItem('token', result[0].token.token);
+      sessionStorage.setItem('fullName', result[0].user.nombreCompleto);
+      sessionStorage.setItem('email', result[0].user.correo);
+      sessionStorage.setItem('photo', result[0].user.fotoURL);
+      sessionStorage.setItem('token', result[0].token.token);
 
       this.router.navigate(['/home']);
     });
